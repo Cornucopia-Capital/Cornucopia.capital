@@ -1,0 +1,172 @@
+/* Index Page Specific Styles */
+main {
+    /* The hero section will define its own height */
+}
+
+.hero {
+    position: relative;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    color: #fff;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../image/hero1.jpg');
+    background-size: cover;
+    background-position: center;
+    /* Add a dark overlay for better text readability using the theme color */
+    background-color: rgba(27, 48, 34, 0.6);
+    background-blend-mode: multiply;
+    z-index: -1;
+}
+
+.hero-content {
+    max-width: 1500px;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    color: #D4AF37;
+    /* Secondary color for the headline */
+    font-family: "Playfair Display SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #D4AF37;
+    /* Secondary color */
+    color: #1B3022;
+    /* Primary theme color */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase;
+}
+
+.cta-button:hover {
+    background-color: #1B3022;
+    color: #D4AF37;
+    transform: translateY(-3px);
+    border: 1px solid #D4AF37;
+    padding: 14px 29px;
+    /* Adjust padding to account for border */
+}
+
+/* Investment Philosophy Section */
+.philosophy {
+    padding: 5rem 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.philosophy h2 {
+    font-size: 2.5rem;
+    color: #1B3022;
+    margin-bottom: 1.5rem;
+}
+
+.philosophy-intro {
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.pillars {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.pillar {
+    flex: 1;
+    min-width: 280px;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.pillar h3 {
+    color: #D4AF37;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+/* Leadership Section */
+.leadership {
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+    /* A slightly different background to separate sections */
+    text-align: center;
+}
+
+.leadership h2 {
+    font-size: 2.5rem;
+    color: #1B3022;
+    margin-bottom: 3rem;
+}
+
+.leader-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.leader-photo img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #D4AF37;
+}
+
+.leader-info h3 {
+    font-size: 1.8rem;
+    color: #1B3022;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .leader-profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero {
+        height: auto;
+        padding: 2rem 1rem 4rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
