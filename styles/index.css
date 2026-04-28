@@ -117,6 +117,57 @@ main {
     font-size: 1.4rem;
 }
 
+/* Clients Banding Section */
+.clients-banding {
+    padding: 3rem 0;
+    background-color: #1B3022;
+    border-top: 1px solid #eaeaea;
+    overflow: hidden;
+}
+
+.clients-banding h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #D4AF37;
+    margin-top: 0;
+    margin-bottom: 3rem;
+}
+
+.client-logos {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    flex-wrap: nowrap;
+    width: max-content;
+    padding-right: 5rem; /* Accounts for the gap to perfectly balance the loop math */
+    animation: scroll-logos 25s linear infinite;
+}
+
+/* Pause the scrolling if a user hovers over a logo */
+.client-logos:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-logos {
+    0% { transform: translateX(0); }
+    /* Because there are exactly 2 identical sets side-by-side, shifting it -50% perfectly aligns set 2 to where set 1 started */
+    100% { transform: translateX(-50%); }
+}
+
+.client-logos img {
+    max-width: 250px;
+    max-height: 120px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.client-logos a:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
 /* Leadership Section */
 .leadership {
     padding: 5rem 0;
