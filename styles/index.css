@@ -16,6 +16,16 @@ main {
     overflow: hidden;
 }
 
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
 .hero::before {
     content: '';
     position: absolute;
@@ -23,17 +33,15 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../image/hero1.jpg');
-    background-size: cover;
-    background-position: center;
     /* Add a dark overlay for better text readability using the theme color */
     background-color: rgba(27, 48, 34, 0.6);
-    background-blend-mode: multiply;
     z-index: -1;
 }
 
 .hero-content {
     max-width: 1500px;
+    position: relative;
+    z-index: 1;
 }
 
 .hero h1 {
